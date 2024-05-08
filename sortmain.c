@@ -27,12 +27,22 @@ int main()
 
 	random_array(array);
 	print_array(array);
-	int n = sizeof(array) / sizeof(array[0]);
-	quick_sort(array, 0, n-1); // n-1 because element of array
+	//int n = sizeof(array) / sizeof(array[0]);
+	//quick_sort(array, 0, n-1); // n-1 because element of array
+	//printf("\n");
+	//printf("Quick sorting");
+	//printf("\n\n");
+	//print_array(array);
+
 	printf("\n");
-	printf("Quick sorting");
+	printf("Selection Sorting");
+	printf("\n");
+	selection_sort(array);
+	printf("\n");
+	printf("SORTEB");
 	printf("\n\n");
 	print_array(array);
+
 
 	
 }

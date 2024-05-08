@@ -123,7 +123,7 @@ int is_sorted_list(const List list)
 
 int is_sorted_array(int* array)
 {
-	for (int i = 0; i < SIZE; i++)
+	for (int i = 0; i < SIZE-1; i++)
 	{
 		if (array[i] > array[i + 1])
 		{
@@ -280,4 +280,28 @@ static int partition(int array[], int low, int high) // Low is first index and h
 	}
 	swap_numbers(&array[i + 1], &array[high]);
 	return (i + 1);
+}
+
+
+void selection_sort(int array[])
+{
+	int smallest_num;
+	for (int i = 0; (is_sorted_array(array) == 0); i++)
+	{
+		smallest_num = array[i];
+		int small_index = i;
+		for (int j = i; j < SIZE; j++)
+		{
+			if (array[j] < smallest_num)
+			{
+				smallest_num = array[j];
+				small_index = j;
+			}
+		}
+		swap_numbers(&array[i], &array[small_index]);
+		printf("\n");
+		print_array(array);
+	}	
+	
+
 }

@@ -49,6 +49,6 @@ void merge(int* array, int start, int middle, int end);
 
 void quick_sort(int* array, int low, int high);
 
-
+void selection_sort(int array[]);
 
 #endif
